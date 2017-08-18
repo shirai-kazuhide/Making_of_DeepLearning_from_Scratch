@@ -1,12 +1,13 @@
 import gradient_descent
-
-gradient_descent.function_2("float")
-
-
-
 import numpy as np
 
 def cross_entropy_error(y,t):
+    """
+    正解ラベルyとPredictラベルtのクロスエントロピーを計算する
+    :param y:
+    :param t:
+    :return:
+    """
     delta = 1e-7
     return -np.sum(t * np.log(y + delta))
 
